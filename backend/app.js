@@ -6,13 +6,13 @@ require("dotenv").config();
 const cors = require('cors');
 
 const corsOptions = {
-  origin: ['http://10.216.74.232:5173/','http://localhost:5173'], // Ensure no trailing slash
+  origin: ['http://10.216.74.232:5173',"http://10.216.68.171:5173",'http://localhost:5173'], // Ensure no trailing slash
   methods: ['POST', 'GET', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 };
 
 app.use(cors(corsOptions))
-app.use(express.json())
+app.use(express.json()) 
 mongoose.connect(process.env.Mongo_URI).then(()=>console.log("MongoAtlas connected"))
 .catch((err)=>console.error(err));
 

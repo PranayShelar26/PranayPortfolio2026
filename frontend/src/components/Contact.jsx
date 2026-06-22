@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { motion } from "motion/react";
 
 const ThankYouPopup = ({ onClose }) => (
   <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -10,7 +11,12 @@ const ThankYouPopup = ({ onClose }) => (
       onClick={onClose}
     />
     {/* Modal */}
-    <div className="relative z-10 bg-[#2C2C2C] border border-[#6E6C6C] rounded-2xl px-10 py-12 flex flex-col items-center gap-4 max-w-sm w-[90%] shadow-[0_0_40px_#8D29B2]">
+    <motion.div
+      className="relative z-10 bg-[#2C2C2C] border border-[#6E6C6C] rounded-2xl px-10 py-12 flex flex-col items-center gap-4 max-w-sm w-[90%] shadow-[0_0_40px_#8D29B2]"
+      initial={{ opacity: 0, scale: 0.9, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+    >
       {/* Icon */}
       <div className="w-16 h-16 rounded-full bg-[#9431DC]/20 border border-[#9431DC] flex items-center justify-center">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +35,7 @@ const ThankYouPopup = ({ onClose }) => (
       >
         Close
       </button>
-    </div>
+    </motion.div>
   </div>
 );
 
@@ -73,7 +79,13 @@ export const Contact = () => {
 
       <div id="contact" className="bg-[#202020] lg:px-[160px] py-5 lg:py-[60px] overflow-hidden h-auto w-auto gap-5 flex flex-col md:flex-row">
         {/* Left Content */}
-        <div className="flex flex-col flex-1 gap-2 py-5 px-4 md:py-0 md:px-0">
+        <motion.div
+          className="flex flex-col flex-1 gap-2 py-5 px-4 md:py-0 md:px-0"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <div className="font-BarlowCondensed leading-tight md:leading-[100px] text-[80px] md:text-[100px] font-extrabold text-white">
             READY TO TALK NEW PROJECT
           </div>
@@ -90,10 +102,16 @@ export const Contact = () => {
               <div className="font-BarlowCondensed text-[24px] font-bold text-white">shelarpranay2611@gmail.com</div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right content */}
-        <div className="flex flex-col flex-1 gap-[30px] mx-2 my-2 md:mx-0 md:my-0 px-4 md:px-[50px] py-5 md:py-[40px] bg-[#2C2C2C] border border-[#6E6C6C]">
+        <motion.div
+          className="flex flex-col flex-1 gap-[30px] mx-2 my-2 md:mx-0 md:my-0 px-4 md:px-[50px] py-5 md:py-[40px] bg-[#2C2C2C] border border-[#6E6C6C]"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+        >
           <div className="font-BarlowCondensed text-[32px] font-bold text-white">LET'S WORK TOGETHER</div>
           <div>
             <form method="POST" onSubmit={handleSubmit(onSubmit)} className="text-white flex flex-col gap-5">
@@ -147,7 +165,7 @@ export const Contact = () => {
               </div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

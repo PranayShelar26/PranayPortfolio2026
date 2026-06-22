@@ -34,6 +34,10 @@ const skillsAll = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
   {
+    name: "Rust",
+    icon: "https://icons.veryicon.com/png/o/business/vscode-program-item-icon/rust-1.png",
+  },
+  {
     name: "HTML",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   },

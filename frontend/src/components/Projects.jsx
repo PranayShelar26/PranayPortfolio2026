@@ -172,8 +172,7 @@ export const Card = ({
               {description}
             </p>
             <span className="flex items-center gap-2 pt-4">
-              <a
-                href={url || "#"}
+              <a href={url || "#"}
                 className="hover:underline transition cursor-pointer text-lg sm:text-xl font-HankenGrotesk"
               >
                 View project
