@@ -145,9 +145,9 @@ export const Card = ({
         }}
         className="flex flex-col relative sm:-top-[25%] origin-top
           w-[90%] sm:w-[80%] lg:w-[70%]
-          h-auto sm:h-[450px]
+          h-full sm:h-[450px]
           rounded-md
-          p-4 sm:p-6 lg:p-10"
+          p-4 sm:p-6 lg:p-10 overflow-hidden"
       >
         <h2 className="text-2xl sm:text-4xl text-center font-BarlowCondensed font-semibold">
           {title}

@@ -1,50 +1,62 @@
 import React from "react";
+import python_icon from "../images/python.svg";
+import javascript_icon from "../images/javascript.svg";
+import java_icon from "../images/java.svg";
+import React_icon from "../images/react.svg";
+import bootstrap_icon from "../images/bootstrap.svg";
+import django_icon from "../images/django.svg";
+import tailwind_icon from "../images/tailwindcss.svg";
+import postgresql_icon from "../images/Postgresql.jpg";
+import mysql_icon from "../images/mysql.jpg";
+import mongodb_icon from "../images/mongodb.svg";
+import rust_icon from "../images/rust.jpg";
+
 
 const skillsAll = [
   {
     name: "Python",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    icon: python_icon,
   },
   {
     name: "JavaScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    icon: javascript_icon,
   },
   {
     name: "Java",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    icon: java_icon,
   },
   {
     name: "ReactJS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    name: "Bootstrap",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-  },
-  {
-    name: "TailwindCSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    icon: React_icon,
   },
   {
     name: "Django",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-  },
-  {
-    name: "MongoDB",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    icon: django_icon,
   },
   {
     name: "Rust",
-    icon: "https://icons.veryicon.com/png/o/business/vscode-program-item-icon/rust-1.png",
+    icon: rust_icon,
   },
   {
-    name: "HTML",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    name: "PostgreSQL",
+    icon: postgresql_icon,
   },
   {
-    name: "CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    name: "MySQL",
+    icon: mysql_icon,
   },
+  {
+    name: "MongoDB",
+    icon: mongodb_icon,
+  },{
+    name: "Bootstrap",
+    icon: bootstrap_icon,
+  },
+  {
+    name: "TailwindCSS",
+    icon: tailwind_icon,
+  },
+  
 ];
 
 const experience = [
@@ -73,7 +85,7 @@ const education = [
   },
 ];
 
-const CalendarIcon = () => (
+const Calendar_icon = () => (
   <svg
     className="w-3.5 h-3.5"
     viewBox="0 0 24 24"
@@ -94,7 +106,7 @@ const TimelineItem = ({ date, role, org, delay }) => (
     style={{ animationDelay: `${delay}ms`, animationFillMode: "forwards" }}
   >
     <span className="absolute flex items-center justify-center w-7 h-7 bg-purple-500 rounded-full -start-[1.85rem] top-0.5 text-white">
-      <CalendarIcon />
+      <Calendar_icon />
     </span>
     <span className="inline-block bg-[#3a3a3a] text-gray-300 text-xs px-2 py-0.5 rounded mb-1">
       {date}
