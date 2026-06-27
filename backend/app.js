@@ -6,7 +6,7 @@ require("dotenv").config();
 const cors = require('cors');
 
 const corsOptions = {
-  origin: ['http://10.216.74.232:5173',"http://10.216.68.171:5173",'http://localhost:5173'], // Ensure no trailing slash
+  origin: ['https://pranayportfolio-pkjc.onrender.com'], // Ensure no trailing slash
   methods: ['POST', 'GET', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true,
 };
