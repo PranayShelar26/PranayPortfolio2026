@@ -5,7 +5,7 @@ import ReactLenis from "lenis/react";
 import { useRef } from "react";
 import NewsAIimg from "../images/NewsAI_Preview.png";
 import ThrilltrekImg from "../images/Thrilltrek_cover.png";
-import TranslateHubImg from "../images/TranslateHub_Homepage.png";
+import TranslateHubImg from "../images/TranslateHub_homepage.png";
 import BooksHavenImg from "../images/BooksHaven_Home.png";
 import Particles from "./Particles";
 
