@@ -54,7 +54,7 @@ export const Contact = () => {
   const onSubmit = async (data) => {
     setisSubmitting(true);
     try {
-      await axios.post("http://localhost:3000/contact", {
+      await axios.post("https://pranayportfolio2026-backend.onrender.com/contact", {
         username: data.username,
         email: data.email,
         message: data.message,
